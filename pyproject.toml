@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pygments-fit-style"
+version = "0.1.0"
+description = "VUT FIT syntax highlighting for pygments."
+authors = ["Matej Kastak"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/MatejKastak/pygments-fit-style"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Pygments = "^2.9.0"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.900"
+black = "^21.5b2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."pygments.styles"]
+fit = "pygments_fit_style.fit:FitStyle"
